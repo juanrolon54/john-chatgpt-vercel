@@ -52,7 +52,7 @@ function App() {
             <div key={id} className={`p-2 border flex flex-col border-white max-w-[80%] w-fit ${from === 'it' ? 'self-start bg-white text-black' : 'self-end'} ${error ? 'bg-red-500 text-black' : ''}`}>{error ? 'ERROR' : content}<br /><small>{time.toLocaleTimeString()}</small></div>
           </div>)
         }
-        {isLoading && <div>...</div>}
+        {isLoading && <div className="animate-pulse">loading...</div>}
         <div ref={scrollRef} /></div>
       <div>
         <form onSubmit={handleSubmit} >
